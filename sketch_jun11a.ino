@@ -47,7 +47,7 @@ void loop() {
   }
   int brightness = map(hum, 0, 100, 0, 255);
   // Control LED brightness
-  analogWrite(A5, brightness);
+  analogWrite(A5, 128-brightness);
 
   delay(10); // Esperar 10 segundos antes de la próxima lectura
   // Map humidity range to LED brightness range (0-255)
