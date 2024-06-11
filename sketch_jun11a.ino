@@ -45,9 +45,9 @@ void loop() {
       digitalWrite(4, LOW); // Apagar la bomba
     }
   }
-  int brightness = map(hum, 0, 100, 0, 255);
+  int brightness = map(hum, 0, 100, 255, 0);
   // Control LED brightness
-  analogWrite(A5, 128-brightness);
+  analogWrite(A5, brightness+50);
 
   delay(10); // Esperar 10 segundos antes de la próxima lectura
   // Map humidity range to LED brightness range (0-255)
